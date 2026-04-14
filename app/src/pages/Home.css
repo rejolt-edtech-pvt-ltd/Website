@@ -1,0 +1,332 @@
+/* Home page specific styles */
+
+/* ── Hero ── */
+.hero-section {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  padding: 5rem 0 3rem;
+  overflow: hidden;
+  background: var(--gradient-hero);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  margin: 1.25rem 0;
+  line-height: 1.1;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  max-width: 640px;
+  margin: 0 auto 2.25rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  flex: 1;
+  min-width: 120px;
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.hero-stat:last-child { border-right: none; }
+.hero-stat:hover { background: rgba(108,63,255,0.06); }
+
+.hero-stat-number {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.hero-stat-label {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+.hero-float-card {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 5%;
+  z-index: 2;
+}
+
+.float-card-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 1rem 1.5rem;
+  background: rgba(26,26,46,0.9);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-hover);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+.float-icon {
+  font-size: 1.75rem;
+}
+
+.float-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.float-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ── About Teaser ── */
+.about-teaser {
+  background: linear-gradient(180deg, transparent, rgba(108,63,255,0.04), transparent);
+}
+
+.about-teaser-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.visual-card {
+  background: var(--gradient-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.visual-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.25rem;
+  animation: float 4s ease-in-out infinite;
+  display: block;
+}
+
+.visual-card h3 {
+  margin-bottom: 1rem;
+}
+
+.visual-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+/* ── Services ── */
+.services-section {
+  background: linear-gradient(180deg, transparent, rgba(0,212,170,0.02), transparent);
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.service-title {
+  font-size: 1.15rem;
+}
+
+.service-desc {
+  font-size: 0.9rem;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.service-tag {
+  padding: 0.25rem 0.65rem;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border: 1px solid;
+}
+
+/* ── Achievements ── */
+.achievements-section {
+  background: linear-gradient(180deg, transparent, rgba(255,107,53,0.03), transparent);
+}
+
+.achievement-highlight {
+  margin-top: 2.5rem;
+  background: var(--bg-card2);
+  border: 1px solid rgba(108,63,255,0.25);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.75rem;
+}
+
+.achievement-highlight-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.achievement-emoji {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.achievement-highlight strong {
+  color: var(--text);
+}
+
+/* ── Courses ── */
+.courses-section {
+  background: linear-gradient(180deg, transparent, rgba(108,63,255,0.04), transparent);
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.course-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course-icon {
+  font-size: 2rem;
+}
+
+.course-title {
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.course-pricing {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.course-price {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.course-original {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  text-decoration: line-through;
+}
+
+.course-discount {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #22c55e;
+  background: rgba(34,197,94,0.1);
+  border: 1px solid rgba(34,197,94,0.25);
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+}
+
+.course-btn {
+  align-self: flex-start;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-teaser-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-float-card { display: none; }
+  .hero-section { padding: 3.5rem 0 2.5rem; }
+}
+
+/* Image styles */
+.hero-img-wrapper {
+  margin: 0 -2rem 3rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  display: block;
+}
+
+.course-card-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+}
